@@ -20,23 +20,23 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 
-const option = ref("gain");
-const valor = ref("");
-const transactions = ref([]);
+const option = ref('gain')
+const valor = ref('')
+const transactions = ref([])
 
 const submitForm = () => {
   const transaction = {
     type: option.value,
-    value: valor.value,
-  };
-  transactions.value.push(transaction);
-  localStorage.setItem("transactions", JSON.stringify(transactions.value));
+    value: valor.value
+  }
+  transactions.value.push(transaction)
+  localStorage.setItem('transactions', JSON.stringify(transactions.value))
 
-  option.value = "gain";
-  valor.value = "";
-};
+  option.value = 'gain'
+  valor.value = ''
+}
 </script>
 
 <style scoped>
